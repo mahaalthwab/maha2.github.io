@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0;
+  font-family: Garamond, Serif;
+  font-size: 50px;
+  direction: ltr;
+  
+}
+
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #8b3030;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 1;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.gallery a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.gallery a:hover {
+  color: #ddd;
+  text-decoration: underline;
+}
+
+.dual-language-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  padding: 40px;
+  direction: rtl;
+  text-align: right;
+}
+
+.dual-language-section .text {
+  width: 100%;
+  max-width: 48%;
+  direction: ltr;
+  text-align: left;
+}
+
+.dual-language-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.dual-language-section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  .dual-language-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dual-language-section .text {
+    width: 100%;
+    direction: rtl;
+    text-align: center;
+  }
+}
+.outer-headings {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.inner-headings {
+  border: 0px solid #ddd;
+  height: 50px;
+  line-height: 50px;
+  font-size: 45px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.inner-headings span {
+  position: relative;
+  color:  #8b3030;
+  animation: animation 10s ease infinite;
+}
+
+@keyframes animation {
+  0%,
+  100% {
+    top: 0;
+  }
+  20% {
+    top: 0;
+  }
+  25% {
+    top: -50px;
+  }
+  45% {
+    top: -50px;
+  }
+  50% {
+    top: -100px;
+  }
+  70% {
+    top: -100px;
+  }
+  75% {
+    top: -150px;
+  }
+  95% {
+    top: -150px;
+  }
+}
+h3{
+
+  color: #f1f1f1;
+}
+
+h4 {
+
+  font-size: 14px;
+}
+
+
+
+h1 {
+            font-size: 115px;
+            color: #ffffff;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s ease-out forwards;
+           
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+  position: relative;
+  text-align: right;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+ 
+}
+
+
+.top-left1 {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.top-left2
+{
+  position: absolute;
+  top: 90px;
+  left: 16px;
+}
+
+
+.top-left3
+{
+  position: absolute;
+  top: 160px;
+  left: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+      
+      
+.fa-linkedin {
+  background: #000000;
+  color: white;
+  border-radius: 50%;
+}
+
+.fa-behance {
+  background: #000000;
+  color: white;
+  border-radius: 50%;
+}
+.fa {
+  padding: 17px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 3px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.custom-cursor {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+  mix-blend-mode: difference; /* دمج المؤشر مع الخلفية */
+  transition: transform 0.2s ease-out, background-color 0.3s ease;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="IMG_6071.MP4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  
+  <h1>MAHA ALTHWAB UIUX Designer</h1>
+  <h1>Front End Developer</h1>
+  <br>
+  <p>I believe that good design is not just about looking good, but rather about building an integrated experience that leaves a lasting impression on users.</p>
+    
+</div>
+
+
+<div class="gallery">
+
+
+  <h1>Scroll to see my Projects</h1>
+
+<br>
+
+  <div class="gallery-item">
+    <a href="https://www.behance.net/gallery/211178957/Restaurant-app-UI/modules/1200358745" target="_blank">
+      <img src="pic1.png" alt="Project 1">
+      <div class="overlay">Restaurant Application</div>
+    </a>
+  </div>
+ 
+  <div class="gallery-item">
+    <a href="https://www.behance.net/gallery/209780181/ToDo-UI/modules/1191970997" target="_blank">
+      <img src="pic555666.png" alt="Project 2">
+      <div class="overlay">To-Do Application</div>
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://www.behance.net/gallery/213599587/Store-website-UI/modules/1215122269" target="_blank">
+      <img src="pic3.png" alt="Project 3">
+      <div class="overlay">Store Website</div>
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://www.behance.net/gallery/214753751/website-uiux/modules/1222222573" target="_blank">
+      <img src="pic55.png" alt="Project 4">
+      <div class="overlay">Store Website</div>
+    </a>
+  </div>
+  <div class="gallery-item">
+    <a href="https://www.behance.net/gallery/209212789/JetUp-case-study-UIUX/modules/1188529973" target="_blank">
+      <img src="pic5.png" alt="Project 5">
+      <div class="overlay">Application for Airlines</div>
+    </a>
+  </div>
+</div>
+
+<div class="outer-headings">
+  <h3>
+    I am,
+    <div class="inner-headings">
+      <span>
+        UI/UX Designer <br />
+        Front-End Developer <br />
+        web Designer <br />
+        App Designer <br />
+      </span>
+      <br>
+
+     
+    </div>
+  </h3>
+</div>
+
+<div class="container">
+  <img src="pic6767.png" alt="web" style="width:55%;" >
+
+  <div class="top-left1">Services: </div>
+  <div class="top-left2">UIUX design </div>
+  <div class="top-left3">Frontend devlopment </div>
+</div>
+
+
+
+
+<div class="dual-language-section">
+  
+    <div class="text">
+      <h1>مرحبًا</h1>
+      <p>
+        أنا مصممة مستقلة متخصصه في تصميم واجهات المستخدم وتجربة المستخدم، بالإضافة إلى تطوير الواجهات . أهدف إلى إنشاء تصميمات تجمع بين الجمال والوظائف، مما يتيح للمستخدمين التفاعل بسهولة.
+      </p>
+    </div>
+    <div class="text">
+      <h1>Welcome</h1>
+      <p>
+        I am a freelance designer specializing in UI/UX design, web design, and Frontend development. I aim to create designs that balance beauty and functionality, ensuring that users can interact easily.
+      </p>
+<br>
+<br>
+<a href="https://www.linkedin.com/in/maha-althawab-694050202/" class="fa fa-linkedin"></a>
+<a href="https://www.behance.net/mahaalthwab1" class="fa fa-behance"></a>
+<br>
+<br>
+      <h4> maha althwab &copy; 2024</h4>
+    </div>
+</div>
+
+
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Press if you feel dizzy";
+  } else {
+    video.pause();
+    btn.innerHTML = "it's ok";
+  }
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Add scroll animations for gallery images
+  gsap.utils.toArray(".gallery-item").forEach((item, index) => {
+    gsap.from(item, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: item,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true,
+      }
+    });
+  });
+
+  gsap.utils.toArray("p").forEach((item, index) => {
+    gsap.from(item, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: item,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true,
+      }
+    });
+  });
+  gsap.utils.toArray("img").forEach((item, index) => {
+    gsap.from(item, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: item,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true,
+      }
+    });
+  });
+</script>
+
+
+<div class="custom-cursor"></div>
+
+<script>
+  const cursor = document.querySelector('.custom-cursor');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  let mouseX = 0, mouseY = 0; // موقع الماوس
+  let cursorX = 0, cursorY = 0; // موقع المؤشر
+  
+  // تحديث موقع المؤشر
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // حركة سلسة للمؤشر مع تأثير فيزيائي
+  function animateCursor() {
+    cursorX += (mouseX - cursorX) * 0.1; // تحريك المؤشر بنسبة تدريجية
+    cursorY += (mouseY - cursorY) * 0.1;
+    cursor.style.left = `${cursorX}px`;
+    cursor.style.top = `${cursorY}px`;
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  // تغيير المؤشر عند التفاعل مع الصور
+  galleryItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      cursor.style.transform = 'scale(3)';
+      cursor.style.backgroundColor = 'rgba(255, 100, 100, 0.6)';
+      cursor.style.filter = 'blur(5px)';
+    });
+    item.addEventListener('mouseleave', () => {
+      cursor.style.transform = 'scale(1)';
+      cursor.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+      cursor.style.filter = 'none';
+    });
+  });
+</script>
+
+
+</body>
+</html>
